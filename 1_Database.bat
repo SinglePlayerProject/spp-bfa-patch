@@ -4,7 +4,7 @@ TITLE %NAME%
 set mainfolder=%CD%
 
 :world_db
-if exist ADB_world_820.00.sql goto database_server
+if exist ADB_world_820.00.sql goto apache
 "%mainfolder%\Server\Tools\7za.exe" e -y -spf Database.7z
 cls
 goto apache
