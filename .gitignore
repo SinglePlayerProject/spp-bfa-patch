@@ -1,9 +1,12 @@
-
+Server/Apache24
 Server/Bin/Crashes
 Server/Bin64/Crashes
 Server/Database
 Server/Data
 Server/Logs
+Server/php5
+Server/NodeJS
+Server/SPP_Hub
 Website/application/cache
 Server/Apache24/logs
 Backup
