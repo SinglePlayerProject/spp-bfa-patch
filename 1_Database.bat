@@ -2,6 +2,11 @@
 SET NAME=SingleCore Database
 TITLE %NAME%
 set mainfolder=%CD%
+cd "%mainfolder%"
+
+:world_db_check
+"%mainfolder%\Server\Tools\wget.exe" -c -N --no-check-certificate ftp://spp-forum.de/Single_Player_Project/Repack/World_of_Warcraft/BFA/ADB_820.7z
+goto world_db
 
 :world_db
 if exist ADB_world_820.00.sql goto apache

@@ -20,3 +20,4 @@ composer.*
 autosave.*
 Server/Apache24/conf/httpd.conf
 Server/Apache24/apache_start.bat
+ADB_820.7z
