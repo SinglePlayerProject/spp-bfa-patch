@@ -1,0 +1,73 @@
+body{
+	background-color: #484848;
+	color:#FFFFFF;
+	font-family:arial;
+	text-align:center;
+	text-shadow:#000000 0 0 5px;
+	}
+
+div.copy{
+	color:#CCCCCC;
+	font-size:14px;
+	font-family:arial;
+	text-align:center;
+	}
+
+div.errors{
+	color:#FF0000;
+	font-family:arial;
+	font-size:12px;
+    margin:5px 0 0 5px;	
+	font-weight:bold;
+	text-align:center;
+	}
+
+table.reg{
+        width:100px;
+        margin:5px 0 0 5px;
+        }
+
+table.form{
+	width:100%;
+	color:#FFFFFF;
+	margin:5px 0;
+	font-family:arial;
+	border-spacing: 5px;
+	font-size:16px;
+	}
+
+input, select{
+	width:160px;
+	padding:3px;
+	background-color:#FFFFFF;
+	color:#484848;
+	border:0;
+	font-size:16px;
+	border-radius: 0px;
+	box-shadow: 0px 0px 3px #FFFFFF;
+	}
+
+input:focus, select:focus{
+	box-shadow: 0px 0px 15px #3D8BFF;
+	}
+
+input.sbm{
+	width:120px;
+	padding:3px;
+	background-color: #3D8BFF;
+	color:#FFFFFF;
+	border:0;
+	font-size:14px;
+	margin-top:15px;
+	border-radius: 0px;
+	}
+
+input.sbm:hover{
+	box-shadow: 0px 0px 15px #FFFFFF;
+	color:#FFFFFF;
+	}
+
+a:link {color:#CCCCCC;}
+a:visited {color:#CCCCCC;}
+a:hover {color:#CCCCCC;}
+a:active {color:#CCCCCC;}
