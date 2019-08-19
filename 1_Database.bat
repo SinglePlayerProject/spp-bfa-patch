@@ -1,6 +1,7 @@
 @echo off
 SET NAME=SingleCore Database
 TITLE %NAME%
+COLOR 06
 set mainfolder=%CD%
 cd "%mainfolder%"
 
@@ -52,5 +53,13 @@ goto database_server
 
 :database_server
 cd "%mainfolder%"
+echo.
+echo Checking broken databases...
+"%mainfolder%\Server\Database\bin\myisamchk" -r -v -f --sort_buffer_size=2G --key_buffer_size=2G "%mainfolder%\Server\Database\data\ashamane_auth\*.MYI"
+"%mainfolder%\Server\Database\bin\myisamchk" -r -v -f --sort_buffer_size=2G --key_buffer_size=2G "%mainfolder%\Server\Database\data\ashamane_characters\*.MYI"
+"%mainfolder%\Server\Database\bin\myisamchk" -r -v -f --sort_buffer_size=2G --key_buffer_size=2G "%mainfolder%\Server\Database\data\ashamane_hotfixes\*.MYI"
+"%mainfolder%\Server\Database\bin\myisamchk" -r -v -f --sort_buffer_size=2G --key_buffer_size=2G "%mainfolder%\Server\Database\data\ashamane_world\*.MYI"
+cls
+
 "%mainfolder%\Server\Database\bin\mysqld" --defaults-file="Server\Database\SPP-Database.ini" --console --standalone --explicit_defaults_for_timestamp --sql-mode=""
 exit
