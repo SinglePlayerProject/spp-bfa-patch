@@ -47,13 +47,12 @@ CREATE TABLE `account` (
   UNIQUE KEY `idx_username` (`username`),
   UNIQUE KEY `uk_bnet_acc` (`battlenet_account`,`battlenet_index`),
   CONSTRAINT `fk_bnet_acc` FOREIGN KEY (`battlenet_account`) REFERENCES `battlenet_accounts` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Account System';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Account System';
 
 /*Data for the table `account` */
 
 insert  into `account`(`id`,`username`,`sha_pass_hash`,`sessionkey`,`v`,`s`,`token_key`,`email`,`reg_mail`,`joindate`,`last_ip`,`last_attempt_ip`,`failed_logins`,`locked`,`lock_country`,`last_login`,`online`,`expansion`,`mutetime`,`mutereason`,`muteby`,`locale`,`os`,`recruiter`,`battlenet_account`,`battlenet_index`) values 
-(1,'1#1','9032DE789F22E272A2C6EF687559A27B8319C58A','','','','','ADMIN@ADMIN','ADMIN@ADMIN','2019-08-19 06:57:00','127.0.0.1','127.0.0.1',0,0,'00',NULL,0,7,0,'','',0,'',0,1,1),
-(2,'ADMIN','8301316D0D8448A34FA6D0C6BF1CBFA2B4A1A93A','','','','','3','3','2019-08-19 06:57:10','127.0.0.1','127.0.0.1',0,0,'00',NULL,0,7,0,'','',0,'',0,NULL,NULL);
+(1,'1#1','9032DE789F22E272A2C6EF687559A27B8319C58A','1D26CC74E0D83795202A4345DCD77AE77F59EA6594B9675B2429752D6D8D9D1D31B9A96B4561507C','','','','ADMIN@ADMIN','ADMIN@ADMIN','2019-08-19 06:57:00','127.0.0.1','127.0.0.1',0,0,'00','2019-08-19 08:00:56',0,7,0,'','',0,'Wn64',0,1,1);
 
 /*Table structure for table `account_access` */
 
@@ -69,7 +68,7 @@ CREATE TABLE `account_access` (
 /*Data for the table `account_access` */
 
 insert  into `account_access`(`id`,`gmlevel`,`RealmID`) values 
-(2,3,1);
+(1,3,1);
 
 /*Table structure for table `account_banned` */
 
@@ -243,12 +242,12 @@ CREATE TABLE `battlenet_accounts` (
   `LoginTicket` varchar(64) DEFAULT NULL,
   `LoginTicketExpiry` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Account System';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Account System';
 
 /*Data for the table `battlenet_accounts` */
 
 insert  into `battlenet_accounts`(`id`,`email`,`sha_pass_hash`,`joindate`,`last_ip`,`failed_logins`,`locked`,`lock_country`,`last_login`,`online`,`locale`,`os`,`LastCharacterUndelete`,`LoginTicket`,`LoginTicketExpiry`) values 
-(1,'ADMIN@ADMIN','17EB61416AE7DD72351CCE6300FFBCD1F755508663596E76CBBDEB2E0A6B1AD6','2019-08-19 06:57:00','127.0.0.1',0,0,'00',NULL,0,0,'',0,NULL,NULL);
+(1,'ADMIN@ADMIN','17EB61416AE7DD72351CCE6300FFBCD1F755508663596E76CBBDEB2E0A6B1AD6','2019-08-19 06:57:00','127.0.0.1',0,0,'00','2019-08-19 08:00:56',0,0,'Wn64',0,'TC-8B44C4F8F05EE7D86EB37D33A1034FAE37F99BB6',1566198056);
 
 /*Table structure for table `battlenet_item_appearances` */
 
@@ -1750,10 +1749,6 @@ CREATE TABLE `realmcharacters` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Realm Character Tracker';
 
 /*Data for the table `realmcharacters` */
-
-insert  into `realmcharacters`(`realmid`,`acctid`,`numchars`) values 
-(1,1,0),
-(1,2,0);
 
 /*Table structure for table `realmlist` */
 
