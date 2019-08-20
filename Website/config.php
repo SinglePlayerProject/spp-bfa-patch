@@ -19,10 +19,10 @@ define('SOAP_IP', '127.0.0.1');
 define('SOAP_PORT', '7878');
 
 // Account name to handle SOAP commands (needs RBAC permissions 219 and 228 for TrinityCore)
-define('SOAP_USER', 'admin');
+define('SOAP_USER', 'website');
 
 // Account name password
-define('SOAP_PASS', 'admin');
+define('SOAP_PASS', 'website');
 
 // Define which SOAP URI gets used
 // This allows for easy switching between different emulators
