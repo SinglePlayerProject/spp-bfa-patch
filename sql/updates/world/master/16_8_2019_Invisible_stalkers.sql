@@ -1,0 +1,1 @@
+UPDATE creature_template SET flags_extra = 128 WHERE `name` = 'Invisible Stalker' AND flags_extra = 0;
